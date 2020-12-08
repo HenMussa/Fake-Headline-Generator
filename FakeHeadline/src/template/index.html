@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Headline</title>
-    <script src="../script/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     
@@ -21,6 +21,23 @@
         <p style="font-size: 20px; color: gray;"></p>
         <h1 style="font-size: 50px; margin-top: -20px;"></h1>
     </div>
-<script src="../script/fakeHeadline.js"></script>
+    
+<script>
+    var title = $('h1');
+    var site = $('p');
+
+    var loadFile = function(event) {
+	var image = document.getElementById('upload');
+    image.src = URL.createObjectURL(event.target.files[0]);
+    }
+
+    $('input#sub').on('click', function(){
+    var wroteTitle = $('input#wroteTitle').val();
+    title.text(wroteTitle)
+
+    var wroteSite = $('input#site').val().toUpperCase();
+    site.text(wroteSite)
+    })
+</script>
 </body>
 </html>
