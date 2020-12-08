@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Headline</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    
+    <label for="img">The Image: </label>
+    <input type="file" id="img" name="img" accept="image/*" onchange="loadFile(event)"><br><br>
+    <label for="site">The Site: </label>
+    <input type="text" id="site" name="site" maxlength="100"><br><br>
+    <label for="title">The Title: </label>
+    <input type="text" id="wroteTitle" name="title"><br><br>
+    <input type="submit" id="sub" value="Do it!">
+
+    <div id="headline" style="width: 1000px; margin-top: 20px;">
+        <img id="upload" width="1000" height="400px">
+        <p style="font-size: 20px; color: gray;"></p>
+        <h1 style="font-size: 50px; margin-top: -20px;"></h1>
+    </div>
+<script src="fakeHeadline.js"></script>
+</body>
+</html>
